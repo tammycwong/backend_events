@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
     # attr_accessor :password
-    # validates :username, uniqueness: {case_sensitive: false}
+    validates :username, uniqueness: true
     
     has_many :events
     has_many :rsvps

@@ -1,8 +1,12 @@
-class Api::V1::EventsController < ApplicationController
+class EventsController < ApplicationController
     def index
         events = Event.all
         render json: events
     end
+
+    # def user_index
+# user = user.find_by(id) .. params
+# user_id.events render json: 
 
     def show
         event = Event.find(params[:id])
@@ -34,6 +38,9 @@ class Api::V1::EventsController < ApplicationController
     end
 
     private
+    def set_event
+        event = Event.find(params[:id])
+    end
 
     def events_params
         params.require(:event).permit(:name, :price, :date, :time, :location, :user_id, :image, :description, :category)
