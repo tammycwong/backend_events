@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     # before_action :find_user, only:[:show, :update, :destroy]
-    skip_before_action :authorized, only: [:create, :login]
+    before_action :authorized, only: [:create, :keep_logged_in]
+    # :login
    
     def index
         users = User.all
@@ -31,6 +32,10 @@ class UsersController < ApplicationController
       end
     end
 
+    def keep_logged_in
+      render json: {user: user, token: encode_token({user_id: user.id})}
+    end
+
     def update
     end
 
@@ -40,6 +45,10 @@ class UsersController < ApplicationController
 
     def destroy
     end
+
+    # def keep_logged_in
+    #   render json: {username: @user.username, id: @user.id, profile_pic: @user.profile_pic, games: @user.games, requests: @user.requests, all_requests_to_my_groups: @user.all_requests_to_my_groups, token: encode_token({user_id: @user.id})}
+    # end
     # def create
     #     @user = User.create(user_params)
     #     if @user.valid?

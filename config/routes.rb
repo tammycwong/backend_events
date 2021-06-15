@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/keep_logged_in", to: "users#keep_logged_in"
 
       resources :users, only:[:create, :index, :show]
       resources :rsvps, only:[:index, :show]
