@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+    before_action :authorized, only:[:create]
+    
     def index
         events = Event.all
         render json: events
@@ -15,7 +17,7 @@ class EventsController < ApplicationController
     end
 
     def create
-        event = Event.create(events_params)
+        event = Event.create(event_params)
         if event.valid?
             event.save
             render json: event
@@ -27,7 +29,7 @@ class EventsController < ApplicationController
 
     def update
         event = Event.find(params[:id])
-        event.update(events_params)
+        event.update(event_params)
         render json: event
     end
 
@@ -42,7 +44,7 @@ class EventsController < ApplicationController
         event = Event.find(params[:id])
     end
 
-    def events_params
+    def event_params
         params.require(:event).permit(:name, :price, :date, :time, :location, :user_id, :image, :description, :category)
     end
 end
