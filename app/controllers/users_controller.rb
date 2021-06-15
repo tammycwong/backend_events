@@ -16,6 +16,7 @@ class UsersController < ApplicationController
       if user.valid?
         user.save
         render json: {user: UserSerializer.new(user), token: encode_token({user_id: user.id})}
+        byebug
       else
         render json: {error: "Not able to create user"}
       end
@@ -23,6 +24,7 @@ class UsersController < ApplicationController
 
     def login
       user = User.find_by(username: params[:username])
+
       if user && user.authenticate(params[:password])
         render json: {user: UserSerializer.new(user), token: encode_token({user_id: user.id})}
       else

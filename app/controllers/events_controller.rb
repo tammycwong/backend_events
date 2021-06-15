@@ -17,7 +17,7 @@ class EventsController < ApplicationController
     end
 
     def create
-        event = Event.create(event_params)
+        event = @user.events.create(event_params)
         if event.valid?
             event.save
             render json: event
@@ -34,7 +34,7 @@ class EventsController < ApplicationController
     end
 
     def destroy
-        event = Event.find(params[:id])
+        event = Events.find(params[:id])
         event.destroy
         render json: event
     end

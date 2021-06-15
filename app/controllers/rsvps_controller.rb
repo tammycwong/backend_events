@@ -34,7 +34,7 @@ class RsvpsController < ApplicationController
     end
 
     def rsvp_params
-        params.permit(:user_id, event_id, :status)
+        params.permit(:user_id, :event_id, :status)
     end
 
 end
