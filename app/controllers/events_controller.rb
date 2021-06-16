@@ -28,13 +28,13 @@ class EventsController < ApplicationController
 
 
     def update
-        event = Event.find(params[:id])
-        event.update(event_params)
-        render json: event
+        @event = Event.find(params[:id])
+        @event.update(event_params)
+        render json: @event
     end
 
     def destroy
-        @event = Events.find(params[:id])
+        @event = Event.find(params[:id])
         @event.destroy
         render json: @event
     end
