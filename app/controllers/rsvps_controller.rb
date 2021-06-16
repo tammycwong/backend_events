@@ -17,9 +17,9 @@ class RsvpsController < ApplicationController
     end
 
     def destroy
-        rsvp = Rsvp.find(params[:id])
-        rsvp.destroy
-        render json: rsvp
+        @rsvp = Rsvp.find(params[:id])
+        @rsvp.destroy
+        render json: @rsvp
     end
 
     def update
