@@ -47,6 +47,7 @@ Event.create(name: "New York City Walking Tour", price: 30, date: "June 27, 2021
 Event.create(name: "Coney Island Beach & Boardwalk", price: 0, date: "July 2, 2021", time: "11AM", location: "Starting @ Nathan's Famous Hotdogs", image: "https://brooklyneagle.com/wp-content/uploads/2019/08/5-Wonder-Wheel-August-2019-photo-4-by-Lore-Croghan-1-1024x627.jpg", user_id: User.all.sample.id, description: "Find courts for beach volleyball, handball, and basketball as well as playgrounds, amusement rides at Luna Park and the New York Aquarium.", category: "Outdoors")
 Event.create(name: "Pokemon Battle League", price: 32, date: "June 30, 2021", time: "3-5PM", location: "Virtual", image: "https://cdn.vox-cdn.com/thumbor/wOq9nk_tMh0Jpv3P_ernXyQoNw8=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/66222640/gobattleleague_announcement_2.0.jpg", user_id: User.all.sample.id, description: "Our Pokémon Battle League program features live-action Pokémon battling in the style of the main series Pokémon video games. During our workshop, we will use an online Pokémon battle simulator to teach basic game strategies such as team composition, move selection, type advantages and more! Kids will then put their skills to the test in one-on-one duels with their peers and their counselors. Pokémon Battle League promotes skills and traits like critical thinking, mathematical and textual literacy, problem solving, sportsmanship, strategy, and value assessment.", category: "Games")
 Event.create(name: "Clean my Mom's House", price: 10, date: "June 4, 2021", time: "2AM", location: "my mom's", image: "https://s22908.pcdn.co/wp-content/uploads/2020/02/google-maps-alternatives.jpg", user_id: User.all.sample.id, description: "Description: $10 for admission because my mom's dope. but seriously, i think there's a dead baby bear in the attic and whoever finds it gets to keep it.", category: "Personal")
+Event.create(name: "Hotdog Eating Contest Watch Party", price: 10, date: "July 4, 2021", time: "12pm", location: "my house", image:"https://www.reviewjournal.com/wp-content/uploads/2018/04/10474927_web1_crop_hot-dog-contest_042217_gb_004.jpg", user_id: User.all.sample.id, description: "https://www.reviewjournal.com/wp-content/uploads/2018/04/10474927_web1_crop_hot-dog-contest_042217_gb_004.jpg", category: "Food")
 
 Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
 Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
@@ -64,6 +65,8 @@ Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.samp
 # Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
 # Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
 # Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
+
+Save.create(user_id: User.all.sample.id, event_id: Event.all.sample.id)
 
 
 
