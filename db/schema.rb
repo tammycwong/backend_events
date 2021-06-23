@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 2021_06_08_212149) do
     t.string "image"
     t.string "username"
     t.string "name"
-    t.integer "age"
     t.string "location"
     t.string "interests"
     t.string "password_digest"
