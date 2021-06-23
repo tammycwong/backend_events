@@ -10,9 +10,10 @@ class Event < ApplicationRecord
     # end
 
     def all_attending_users
-        self.users.map do |user|
-            user.name
-        end
+        self.users
+        # self.users.map do |user|
+        #     user.name
+        # end
     end
 
     # def hosted_by
