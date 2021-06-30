@@ -44,9 +44,6 @@ class UsersController < ApplicationController
     def auto_login
       render json: user
     end
-
-    def destroy
-    end
     
       private
       def user_params

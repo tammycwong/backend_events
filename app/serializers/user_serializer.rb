@@ -3,5 +3,4 @@ class UserSerializer < ActiveModel::Serializer
 
   has_many :events
   has_many :rsvps
-  # has_many :goingevents
 end

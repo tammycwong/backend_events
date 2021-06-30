@@ -6,10 +6,6 @@ class EventsController < ApplicationController
         render json: events
     end
 
-    # def user_index
-# user = user.find_by(id) .. params
-# user_id.events render json: 
-
     def show
         event = Event.find(params[:id])
         render json: event
