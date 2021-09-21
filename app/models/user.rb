@@ -1,6 +1,5 @@
 class User < ApplicationRecord
     has_secure_password
-    # attr_accessor :password
     validates :username, uniqueness: true
     
     has_many :events

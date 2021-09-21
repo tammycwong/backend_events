@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Rsvp.destroy_all
 Event.destroy_all
@@ -49,23 +42,7 @@ Event.create(name: "Pokemon Battle League", price: 32, date: "June 30, 2021", ti
 Event.create(name: "Clean my Mom's House", price: 10, date: "June 4, 2021", time: "2AM", location: "my mom's", image: "https://s22908.pcdn.co/wp-content/uploads/2020/02/google-maps-alternatives.jpg", user_id: User.all.sample.id, description: "Description: $10 for admission because my mom's dope. but seriously, i think there's a dead baby bear in the attic and whoever finds it gets to keep it.", category: "Personal")
 Event.create(name: "Hotdog Eating Contest Watch Party", price: 10, date: "July 4, 2021", time: "12PM", location: "my house", image: "https://www.reviewjournal.com/wp-content/uploads/2018/04/10474927_web1_crop_hot-dog-contest_042217_gb_004.jpg", user_id: User.all.sample.id, description: "Watch the event of the year with me and my mom- we got a recliner and 2 sectionals. max capacity: 16 heads. Hotdogs will be provided, max 2 per person. BYOKetchup event.", category: "Food")
 
-
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
 Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
-# Rsvp.create(status: "yes", user_id: User.all.sample.id, event_id: Event.all.sample.id)
 
 
 
